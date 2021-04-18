@@ -1,14 +1,14 @@
 import requests
 import apache_log_parser
 
-from urllib.parse import urlparse
-from pathlib import Path
+
 from django.core.management.base import BaseCommand
 
 from apache_log.models import ApacheLog
 
+
 class Command(BaseCommand):
-    help = 'HELP TEXT'
+    help = 'Upload apache log to DB'
 
     def add_arguments(self, parser):
         parser.add_argument('url', type=str)
