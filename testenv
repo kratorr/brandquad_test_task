@@ -1,8 +1,0 @@
-DEBUG=TRUE
-SECRET_KEY='asdghesfgderwgdfb'
-SQL_ENGINE=django.db.backends.postgresql
-SQL_DATABASE=log_db
-SQL_USER=django_user
-SQL_PASSWORD=django_password
-SQL_HOST=db
-SQL_PORT=5432
