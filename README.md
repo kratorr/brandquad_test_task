@@ -34,25 +34,18 @@ SQL_PORT=5432
 
 - Скачайте репозиторий
 - Запустите проект через docker-compose
- ```bash
+```
 docker-compouse up --build -d
 ```
-- Подключитесь к контейнеру с приложением 
-```bash
-docker-compose exec app /bin/sh
-```
-Примените миграции
-```bash
-/opt/app # python3 manage.py migrate
 
+Примените миграции
 ```
+docker-compose exec app python3 manage.py migrate 
+```
+
 - Создайте супер пользователя
 ```bash
-/opt/app # python3 manage.py createsuperuser
-```
-- Отключитесь от контейнера
-```bash
-/opt/app # exit
+docker-compose exec app python3 manage.py createsuperuser 
 ```
 
 
