@@ -50,8 +50,5 @@ class Command(BaseCommand):
             if log_to_insert:
                 ApacheLog.objects.bulk_create(log_to_insert)
                 self.stdout.write('Insert chunk into DB')
-                log_to_insert = []
-
-        ApacheLog.objects.bulk_create(log_to_insert)
-
+      
         self.stdout.write(self.style.SUCCESS('Successfully upload apache log'))
